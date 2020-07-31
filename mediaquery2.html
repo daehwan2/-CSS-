@@ -1,0 +1,143 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            border: 1px solid gray;
+        }
+
+        header {
+            border-bottom: 1px solid gray;
+            padding-left: 20px;
+            text-align: center;
+        }
+
+        footer {
+            border-top: 1px solid gray;
+            padding-left: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+        }
+
+
+
+        .content nav {
+            border-right: 1px solid gray;
+        }
+
+
+
+        .content aside {
+            border-left: 1px solid gray;
+        }
+
+        @media(max-width:500px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .content nav {
+                border-right: none;
+                flex-basis: auto;
+            }
+
+            .content aside {
+                border-left: none;
+                flex-basis: auto;
+            }
+
+            main {
+                order: 0;
+            }
+
+            nav {
+                order: 1;
+            }
+
+            aside {
+                order: 2;
+            }
+        }
+
+        nav,
+        aside {
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+
+        main {
+            padding: 10px;
+        }
+
+        /* nav {
+            order: 0;
+        }
+
+        main {
+            order: 2;
+        }
+
+        aside {
+            order: 1;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>김대환홈피</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ipsum ipsum. Praesent finibus est
+                eleifend lacus vulputate venenatis. Cras dictum eget arcu nec feugiat. Donec congue et ex aliquet
+                mollis. Sed ornare congue lectus id blandit. Nullam at orci eros. Mauris vitae eros ac neque gravida
+                semper ut ut magna. Sed vitae pellentesque arcu, vel gravida sem. Mauris non massa non nulla ornare
+                sollicitudin eu et massa. Nam et odio tristique, luctus tortor vitae, aliquam mi. Duis molestie in metus
+                eu lacinia. Sed cursus leo in sagittis pretium. Cras consequat nunc in maximus pharetra. Maecenas
+                elementum elit sed lacus dictum molestie. Maecenas sed lectus sagittis, tincidunt elit et, venenatis
+                leo.
+
+                Integer ac risus non dui accumsan placerat ut in sem. Suspendisse tincidunt odio ut hendrerit placerat.
+                Nulla facilisi. Integer mollis eu enim et faucibus. Phasellus pharetra vestibulum felis in porttitor.
+                Curabitur euismod neque eget gravida aliquet. Curabitur id ex mollis, hendrerit ante varius, tincidunt
+                ex. Mauris et lacinia nunc. Vivamus elementum dui est, in eleifend erat pharetra vitae. Vestibulum
+                cursus consequat velit ac porta. Nam quis hendrerit erat. Donec tortor velit, fermentum ut feugiat at,
+                tincidunt non ipsum. Ut at tortor augue. Nullam interdum condimentum velit, a imperdiet diam.
+            </main>
+            <aside>
+                AD
+            </aside>
+
+        </section>
+        <footer>
+            <a href="https://www.naver.com">홈페이지</a>
+        </footer>
+    </div>
+</body>
+
+</html>
